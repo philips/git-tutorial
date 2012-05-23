@@ -69,22 +69,58 @@
         </ul>
       </article>
 
-      <article>
+      <article class="fill">
         <h3>
           What do we mean by distributed?
         </h3>
-        <ul>
+        <ul class="build">
           <li>Every checkout has full history</li>
           <li>No systemic source of truth <em>only the truth we believe</em></li>
           <li>Private until you push</li>
           <li>You don't see other changes until you pull</li>
+          <!-- This line is a mistake, we will fix it during
+               the presentation -->
+          <img style='height: 300px' id="fill" src='images/aladdin-jasmine.gif'>
         </ul>
       </article>
 
       <article>
-        <section>
         <img style='height: 600px' src="images/git-transport.png">
-        </section>
+      </article>
+
+      <article>
+        <h3>
+          Well formed commit message
+        </h3>
+        <pre>
+subsystem: what you are changing
+
+a sentence/paragraph why you are making a change.
+        </pre>
+      </article>
+
+      <article>
+        <h3>
+          Well formed commit message example
+        </h3>
+        <pre class="noprettyprint">
+commit 871a681c931feff0c6666cee1a3b07fc4d7e5a78
+Author: Brandon Philips <brandon.philips@rackspace.com>
+Date:   Mon May 14 13:57:37 2012 -0700
+
+lib: virgo-init: implement process.exitCode
+
+once and awhile we encounter an error that causes our event
+loop to exit before we expect it too. This happened in our
+scheduler test and buildbot didn't catch it as an error. So,
+implement the exitCode logic that I sent to luvit in virgo:
+
+https://github.com/luvit/luvit/pull/221
+
+I tested this on hash
+60ef64fe9d6a2cee78582247e373c507ee7fe3a5 and it causes make
+test to exit with a non-zero exit code.
+        </pre>
       </article>
 
       <article class='fill'>
